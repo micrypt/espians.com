@@ -118,7 +118,35 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+html, html a, button {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
 
+.main-container {
+    background: url(../img/map.png) no-repeat;
+    min-height: 300px;
+}
+
+
+nav {
+    margin-top: 30px;
+}
+
+.home a {
+    display: inline-block;
+    background: url(../img/logo.svg) no-repeat;
+    width: 120px;
+    height: 30px;
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+.intro {
+    background: #DF1C01;
+    min-height: 150px;
+    padding: 25px 0;
+}
 
 
 
