@@ -33,8 +33,11 @@ dragBG = (() ->
       @origin_bg_pos_x = parseInt(styles.getPropertyValue('background-position').split(' ')[0], 10)
       @origin_bg_pos_y = parseInt(styles.getPropertyValue('background-position').split(' ')[1], 10)
       @el.addEventListener('mousedown', @onMousedown.bind(@), false)
+      @el.addEventListener('touchstart', @onMousedown.bind(@), false)
       @el.addEventListener('mouseup', @onMouseup.bind(@), false)
+      @el.addEventListener('touchend', @onMouseup.bind(@), false)
       @el.addEventListener('mousemove', @onMousemove.bind(@), false)
+      @el.addEventListener('touchmove', @onMousemove.bind(@), false)
       return
 
   (el) ->
