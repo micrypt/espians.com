@@ -7,21 +7,26 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #444;
+}
+
+html, button {
+    -webkit-font-smoothing: antialiased;    
 }
 
 body {
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Montserrat', sans-serif;
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #EEEEEE;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #EEEEEE;
     text-shadow: none;
 }
 
@@ -47,6 +52,17 @@ fieldset {
 textarea {
     resize: vertical;
 }
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 .chromeframe {
     margin: 0.2em 0;
@@ -123,17 +139,20 @@ html, html a, button {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
-.main-container {
-    background: url(../img/map.png) no-repeat;
-    min-height: 300px;
+h1 {
+    font-size: 1.6em;
+    margin: .17em 0;
 }
-
 
 nav {
-    margin-top: 30px;
 }
 
-.home a {
+nav ul li a {
+    margin: 0;
+    padding: 0;
+}
+
+nav .home a {
     display: inline-block;
     background: url(../img/logo.svg) no-repeat;
     width: 120px;
@@ -142,22 +161,63 @@ nav {
     overflow: hidden;
 }
 
-.intro {
-    background: #DF1C01;
-    min-height: 150px;
-    padding: 25px 0;
+nav,
+main > section {
+    padding: 35px 35px 35px 35px;
 }
 
+section header {
+    background: url(../img/earth-space.jpg);
+    background-position: 50% 50%;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+    margin: 0;
+}
 
+section p {
+    max-width: 850px;
+}
 
+section a,
+section em {
+    font-weight: bold;
+    font-style: normal;
+}
 
+.who {
+    background: #DF1C01;
+    min-height: 150px;
+    color: #fff;
+}
 
+.who h1 {
+    background: none;
+}
 
+.who a {
+    color: #4E0000;
+}
 
+.why header {
+    background-position: 80% 20%;
+}
 
+.what {
+    background: #FAFAFA;
+}
 
-
-
+.map {
+    background: url(../img/map.png) no-repeat 0 50px;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 300px;
+}
 
 
 /* ==========================================================================
@@ -165,10 +225,25 @@ nav {
    ========================================================================== */
 
 @media only screen and (min-width: 480px) {
-
+    h1 {
+        font-size: 2.5em;
+        margin: .17em 0;
+    }
+    nav,
+    main > section {
+        padding: 35px 35px 35px 70px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 3.5em;
+        margin: .17em 0;
+    }
+    nav,
+    main > section {
+        padding: 35px 35px 35px 70px;
+    }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -177,9 +252,16 @@ nav {
     Maximal Width
    =============== */
 
-    .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
-        margin: 0 auto;
+    header, body > section {
+        margin: 30px 70px;
+    }
+    h1 {
+        font-size: 4.5em;
+        margin: .17em 0;
+    }
+    nav,
+    main > section {
+        padding: 35px 35px 35px 70px;
     }
 }
 
